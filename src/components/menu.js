@@ -24,7 +24,7 @@ const StyledMenu = styled.header`
   .logo {
     width: 100%;
     max-width: 80px;
-    @media (min-width: 600px) {
+    @media (min-width: 300px) {
       max-width: 127px;
     }
     .text {
