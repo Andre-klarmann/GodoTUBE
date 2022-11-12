@@ -78,7 +78,7 @@ function Timeline({ valorDoFiltro, ...props }) {
 								})
 								.map((video) => {
 									return (
-										<a key={video.title} href={video.title}>
+										<a key={video.title} href={video.url} target="_blank">
 											<img src={video.thumb} />
 											<span>{video.title}</span>
 										</a>
