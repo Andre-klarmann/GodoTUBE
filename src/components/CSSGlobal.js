@@ -10,6 +10,8 @@ export const CSSReset = createGlobalStyle`
   body {
     font-family: sans-serif;
     overflow-x: hidden;
+    background-color: ${({ theme }) => theme.backgroundBase};
+    color: ${({ theme }) => theme.textColorBase};
   }
   /* NextJS */
   html {
