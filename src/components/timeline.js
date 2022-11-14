@@ -37,9 +37,19 @@ export const StyledTimeline = styled.div`
 
 			a {
 				scroll-snap-align: start;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				img {
+					border-radius: 10%;
+				}
 				span {
+					font-family: Verdana, Geneva, Tahoma, sans-serif;
+					font-weight: 300;
 					padding-top: 8px;
 					display: block;
+
 					padding-right: 24px;
 					color: ${({ theme }) => theme.textColorBase || "#222222"};
 				}

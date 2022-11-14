@@ -2,12 +2,12 @@
 	"name": "André Klarmann",
 	"job": "Full-Stack Developer",
 	"gitimg": "Andre-klarmann.png",
-	"playlists": {
+	"playlist": {
 		"Godo": [
 			{
 				"title": "Melhores Clipes do Godo ",
 				"url": "https://www.youtube.com/watch?v=FKQH9s6DbpM",
-				"thumb": "https://img.youtube.com/vi/QsqatJxAUtk/hqdefault.jpg"
+				"thumb": "https://img.youtube.com/vi/FKQH9s6DbpM/hqdefault.jpg"
 			},
 
 			{
