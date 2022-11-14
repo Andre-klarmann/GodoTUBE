@@ -5,7 +5,7 @@ export const StyledRegisterVideo = styled.div`
 		width: 50px;
 		height: 50px;
 		font-size: 20px;
-		color: inherit;
+		color: #f9f9f9;
 		position: fixed;
 		bottom: 16px;
 		right: 16px;
@@ -32,7 +32,7 @@ export const StyledRegisterVideo = styled.div`
 		border: none;
 		border-radius: 2px;
 		cursor: pointer;
-		color: inherit;
+		color: #f9f9f9;
 	}
 	form {
 		width: 100%;
