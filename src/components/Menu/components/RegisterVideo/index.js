@@ -30,6 +30,23 @@ export default function RegisterVideo() {
 	const formCadastro = UseForm({
 		initialValues: { url: "", title: "" },
 	});
+
+	function findImg() {
+		if (formCadastro.values.url?.includes("youtube")) {
+			return `https://img.youtube.com/vi/${formCadastro.values.url.slice(
+				32,
+				43
+			)}/hqdefault.jpg`;
+		}
+		if (formCadastro.values.url?.includes("youtu.be")) {
+			return `https://img.youtube.com/vi/${formCadastro.values.url.slice(
+				17,
+				28
+			)}/hqdefault.jpg`;
+		}
+		console.log(formCadastro.values.url);
+	}
+
 	return (
 		<StyledRegisterVideo>
 			<button id="add-video" onClick={() => setFormVisible(true)}>
@@ -81,14 +98,7 @@ export default function RegisterVideo() {
 						/>
 						<button type="submit">Enviar</button>
 						{formCadastro.values.url && (
-							<img
-								id="image"
-								alt="Imagem do video"
-								src={`https://img.youtube.com/vi/${formCadastro.values.url.slice(
-									32,
-									43
-								)}/hqdefault.jpg`}
-							/>
+							<img id="image" alt="Imagem do video" src={findImg()} />
 						)}
 					</div>
 				</form>
