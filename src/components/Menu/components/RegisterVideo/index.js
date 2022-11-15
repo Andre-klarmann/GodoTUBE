@@ -60,10 +60,7 @@ export default function RegisterVideo() {
 							.insert({
 								title: formCadastro.values.title,
 								url: formCadastro.values.url,
-								thumb: `https://img.youtube.com/vi/${formCadastro.values.url.slice(
-									32,
-									43
-								)}/hqdefault.jpg`,
+								thumb: findImg(),
 								playlist: "Godo",
 							})
 							.then((res) => {
