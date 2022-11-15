@@ -28,23 +28,22 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default function RegisterVideo() {
 	const [formVisible, setFormVisible] = React.useState(false);
 	const formCadastro = UseForm({
-		initialValues: { url: "", title: "" },
+		initialValues: { url: "", title: "", playlist: "" },
 	});
 
 	function findImg() {
-		if (formCadastro.values.url?.includes("youtube")) {
+		if (formCadastro.values.url.includes("youtube")) {
 			return `https://img.youtube.com/vi/${formCadastro.values.url.slice(
 				32,
 				43
 			)}/hqdefault.jpg`;
 		}
-		if (formCadastro.values.url?.includes("youtu.be")) {
+		if (formCadastro.values.url.includes("youtu.be")) {
 			return `https://img.youtube.com/vi/${formCadastro.values.url.slice(
 				17,
 				28
 			)}/hqdefault.jpg`;
 		}
-		console.log(formCadastro.values.url);
 	}
 
 	return (
@@ -61,7 +60,7 @@ export default function RegisterVideo() {
 								title: formCadastro.values.title,
 								url: formCadastro.values.url,
 								thumb: findImg(),
-								playlist: "Godo",
+								playlist: formCadastro.values.playlist,
 							})
 							.then((res) => {
 								console.log(res);
@@ -91,6 +90,12 @@ export default function RegisterVideo() {
 							type="URL"
 							name="url"
 							placeholder="URL do vídeo"
+							onChange={formCadastro.handleChange}
+						/>
+						<input
+							type="text"
+							name="playlist"
+							placeholder="Nome da Playlist/ Nome da nova Playlist"
 							onChange={formCadastro.handleChange}
 						/>
 						<button type="submit">Enviar</button>
