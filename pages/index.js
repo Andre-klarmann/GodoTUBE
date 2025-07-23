@@ -5,9 +5,9 @@ import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/timeline";
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl = "https://kjrzkvvspoypfgxewzrg.supabase.co";
-const supabaseKey =
-	"*";
+
+const supabaseKey = process.env.API_KEY;
+const databaseUrl = process.env.DATABASE_URL;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default function Home() {
